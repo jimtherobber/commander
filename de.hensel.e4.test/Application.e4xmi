@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_lo7uMEZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ide.application" bindingContexts="_lo8VQEZZEeOjyLsgQjs78A">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_lo7uMUZZEeOjyLsgQjs78A" label="de.hensel.e4.test" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_lo9jZkZZEeOjyLsgQjs78A">
+      <children xsi:type="advanced:Perspective" xmi:id="_lo-KcEZZEeOjyLsgQjs78A">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_lo-KcUZZEeOjyLsgQjs78A">
+          <children xsi:type="basic:PartStack" xmi:id="_lo-KckZZEeOjyLsgQjs78A">
+            <children xsi:type="basic:Part" xmi:id="_lo-Kc0ZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.part.0" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.parts.SamplePart" label="Sample Part"/>
+            <children xsi:type="basic:Part" xmi:id="_E7E-ME4rEeObEor_H1jAAQ" elementId="de.hensel.e4.test.part.1" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.parts.TestPart" label="TestPart">
+              <menus xmi:id="_FKcWENk3EeOLV_Ayihru-g" elementId="de.hensel.e4.test.menu.0" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif">
+                <tags>ViewMenu</tags>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_LTyS4Nk3EeOLV_Ayihru-g" elementId="de.hensel.e4.test.handledmenuitem.0" label="Encrypt Text" tooltip="Encrypt Text" command="_uZBtYNkuEeOLV_Ayihru-g"/>
+              </menus>
+            </children>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_lo88W0ZZEeOjyLsgQjs78A" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_lo9jYEZZEeOjyLsgQjs78A" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_lo9jYUZZEeOjyLsgQjs78A" label="Open" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif" command="_lo88UkZZEeOjyLsgQjs78A"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_lo9jYkZZEeOjyLsgQjs78A" label="Save" iconURI="platform:/plugin/de.hensel.e4.test/icons/save_edit.gif" command="_lo88VUZZEeOjyLsgQjs78A"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_lo9jY0ZZEeOjyLsgQjs78A" label="Quit" command="_lo8VQ0ZZEeOjyLsgQjs78A"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_lo9jZEZZEeOjyLsgQjs78A" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_lo9jZUZZEeOjyLsgQjs78A" label="About" command="_lo88WEZZEeOjyLsgQjs78A"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_lo-xgEZZEeOjyLsgQjs78A">
+      <children xsi:type="menu:ToolBar" xmi:id="_lo-xgUZZEeOjyLsgQjs78A" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lo-xgkZZEeOjyLsgQjs78A" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif" command="_lo88UkZZEeOjyLsgQjs78A"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lo-xg0ZZEeOjyLsgQjs78A" iconURI="platform:/plugin/de.hensel.e4.test/icons/save_edit.gif" command="_lo88VUZZEeOjyLsgQjs78A"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_lo8VREZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.quitCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.QuitHandler" command="_lo8VQ0ZZEeOjyLsgQjs78A"/>
+  <handlers xmi:id="_lo88U0ZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.openCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.OpenHandler" command="_lo88UkZZEeOjyLsgQjs78A"/>
+  <handlers xmi:id="_lo88VkZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.saveCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.SaveHandler" command="_lo88VUZZEeOjyLsgQjs78A"/>
+  <handlers xmi:id="_lo88WUZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.aboutCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.AboutHandler" command="_lo88WEZZEeOjyLsgQjs78A"/>
+  <handlers xmi:id="_4lGf0NkuEeOLV_Ayihru-g" elementId="de.hensel.e4.test.handler.encryptHandler" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.EncryptHandler" command="_uZBtYNkuEeOLV_Ayihru-g"/>
+  <bindingTables xmi:id="_lo88UEZZEeOjyLsgQjs78A" bindingContext="_lo8VQEZZEeOjyLsgQjs78A">
+    <bindings xmi:id="_lo88UUZZEeOjyLsgQjs78A" keySequence="M1+Q" command="_lo8VQ0ZZEeOjyLsgQjs78A"/>
+    <bindings xmi:id="_lo88VEZZEeOjyLsgQjs78A" keySequence="M1+O" command="_lo88UkZZEeOjyLsgQjs78A"/>
+    <bindings xmi:id="_lo88V0ZZEeOjyLsgQjs78A" keySequence="M1+S" command="_lo88VUZZEeOjyLsgQjs78A"/>
+    <bindings xmi:id="_lo88WkZZEeOjyLsgQjs78A" keySequence="M1+A" command="_lo88WEZZEeOjyLsgQjs78A"/>
+  </bindingTables>
+  <rootContext xmi:id="_lo8VQEZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_lo8VQUZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_lo8VQkZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_lo8VQ0ZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_lo88UkZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.open" commandName="openCommand"/>
+  <commands xmi:id="_lo88VUZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_lo88WEZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_uZBtYNkuEeOLV_Ayihru-g" elementId="de.hensel.e4.test.command.encrypt" commandName="encryptCommand"/>
+  <addons xmi:id="_lo7uMkZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_lo7uM0ZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_lo7uNEZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_lo7uNUZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_lo7uNkZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_lo7uN0ZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_lo7uOEZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
