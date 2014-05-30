@@ -9,7 +9,8 @@
             <children xsi:type="basic:Part" xmi:id="_E7E-ME4rEeObEor_H1jAAQ" elementId="de.hensel.e4.test.part.1" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.parts.TestPart" label="TestPart">
               <menus xmi:id="_FKcWENk3EeOLV_Ayihru-g" elementId="de.hensel.e4.test.menu.0" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif">
                 <tags>ViewMenu</tags>
-                <children xsi:type="menu:HandledMenuItem" xmi:id="_LTyS4Nk3EeOLV_Ayihru-g" elementId="de.hensel.e4.test.handledmenuitem.0" label="Encrypt Text" tooltip="Encrypt Text" command="_uZBtYNkuEeOLV_Ayihru-g"/>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_LTyS4Nk3EeOLV_Ayihru-g" elementId="de.hensel.e4.test.handledmenuitem.encrypt" label="Encrypt Text" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif" tooltip="Encrypt Text" command="_uZBtYNkuEeOLV_Ayihru-g"/>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_DkdM4OgjEeOzbNyZrnGDdQ" elementId="de.hensel.e4.test.handledmenuitem.decrypt" label="Decrypt Text" iconURI="platform:/plugin/de.hensel.e4.test/icons/sample.gif" tooltip="Decrypt Text" command="_AkC3QOggEeOzbNyZrnGDdQ"/>
               </menus>
             </children>
           </children>
@@ -38,6 +39,7 @@
   <handlers xmi:id="_lo88VkZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.saveCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.SaveHandler" command="_lo88VUZZEeOjyLsgQjs78A"/>
   <handlers xmi:id="_lo88WUZZEeOjyLsgQjs78A" elementId="de.hensel.e4.test.handler.aboutCommand" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.AboutHandler" command="_lo88WEZZEeOjyLsgQjs78A"/>
   <handlers xmi:id="_4lGf0NkuEeOLV_Ayihru-g" elementId="de.hensel.e4.test.handler.encryptHandler" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.EncryptHandler" command="_uZBtYNkuEeOLV_Ayihru-g"/>
+  <handlers xmi:id="_8gDdYOgfEeOzbNyZrnGDdQ" elementId="de.hensel.e4.test.handler.decryptHandler" contributionURI="bundleclass://de.hensel.e4.test/de.hensel.e4.test.handlers.DecryptHandler" command="_AkC3QOggEeOzbNyZrnGDdQ"/>
   <bindingTables xmi:id="_lo88UEZZEeOjyLsgQjs78A" bindingContext="_lo8VQEZZEeOjyLsgQjs78A">
     <bindings xmi:id="_lo88UUZZEeOjyLsgQjs78A" keySequence="M1+Q" command="_lo8VQ0ZZEeOjyLsgQjs78A"/>
     <bindings xmi:id="_lo88VEZZEeOjyLsgQjs78A" keySequence="M1+O" command="_lo88UkZZEeOjyLsgQjs78A"/>
@@ -53,11 +55,15 @@
   <commands xmi:id="_lo88VUZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_lo88WEZZEeOjyLsgQjs78A" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
   <commands xmi:id="_uZBtYNkuEeOLV_Ayihru-g" elementId="de.hensel.e4.test.command.encrypt" commandName="encryptCommand"/>
+  <commands xmi:id="_AkC3QOggEeOzbNyZrnGDdQ" elementId="de.hensel.e4.test.command.decrypt" commandName="decryptCommand"/>
   <addons xmi:id="_lo7uMkZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
-  <addons xmi:id="_lo7uM0ZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_lo7uM0ZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon">
+    <persistedState key="service.context.key" value="keymap"/>
+  </addons>
   <addons xmi:id="_lo7uNEZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
   <addons xmi:id="_lo7uNUZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
   <addons xmi:id="_lo7uNkZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_lo7uN0ZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_lo7uOEZZEeOjyLsgQjs78A" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_e1v-YOgkEeOzbNyZrnGDdQ" elementId="de.hensel.e4.test.addon.0" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
 </application:Application>

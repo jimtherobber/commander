@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="de.hensel.e4.test" id="de.hensel.e4.test.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
-
+<product name="de.hensel.e4.test" uid="de.hensel.e4.test" id="de.hensel.e4.test.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -17,8 +16,6 @@
    <splash
       location="de.hensel.e4.test"
       startupProgressRect="5,275,445,15" />
-
-
    <plugins>
       <plugin id="com.ibm.icu"/>
       <plugin id="de.hensel.e4.test"/>

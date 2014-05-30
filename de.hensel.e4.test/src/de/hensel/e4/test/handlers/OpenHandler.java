@@ -35,11 +35,12 @@ public class OpenHandler {
 	@Inject 
 	EPartService partService;
 	
-	FileReaderIO reader;
+	
 
 	@Execute
 	public void execute(Shell shell){
-		
+	
+		FileReaderIO reader = new FileReaderIO();
 		File file = reader.openFileDialog(shell);
 		MPart part = partService.findPart(TestPart.ID);
 		
