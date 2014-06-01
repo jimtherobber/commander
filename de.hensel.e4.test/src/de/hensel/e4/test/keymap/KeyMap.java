@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class KeyMap {
-	Map<Integer, List<Integer>> keyMap = new HashMap<>();
+	Map<Integer, List<Character>> keyMap = new HashMap<>();
 	private Integer actualKey;
 	
 	private KeyMap(){}
@@ -23,11 +23,11 @@ public class KeyMap {
 		return keyMap.containsKey(key);
 	}
 	
-	public List<Integer> getKeyListFromMap(Integer key){
+	public List<Character> getKeyListFromMap(Integer key){
 		return keyMap.get(key);
 	}
 	
-	public void insert(Integer key , List<Integer> values){
+	public void insert(Integer key , List<Character> values){
 		if(key != null && values != null){
 			keyMap.put(key, values);
 		}

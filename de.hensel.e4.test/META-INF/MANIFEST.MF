@@ -1,7 +1,9 @@
 Manifest-Version: 1.0
 Service-Component: OSGI-INF/serviceComponents.xml
+Bundle-ActivationPolicy: lazy
 Bundle-ManifestVersion: 2
-Bundle-Name: Test
+Bundle-Name: Test: Bundle Activation - Activator
+Bundle-Activator: de.hensel.e4.test.activator.Activator
 Bundle-SymbolicName: de.hensel.e4.test;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: EXAMPLE
