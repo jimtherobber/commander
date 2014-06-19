@@ -115,7 +115,7 @@ public class TestPart {
 						text_2 = new Text(composite_2, SWT.BORDER);
 						text_2.setBounds(43, 0, 167, 19);
 						
-						text_1 = new Text(composite_1, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL | SWT.CANCEL | SWT.MULTI);
+						text_1 = new Text(composite_1, SWT.BORDER | SWT.WRAP | SWT.H_SCROLL | SWT.V_SCROLL | SWT.CANCEL | SWT.MULTI);
 						GridData gd_text_1 = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
 						gd_text_1.heightHint = 232;
 //						gd_text_1.widthHint = 169;
@@ -185,9 +185,9 @@ public class TestPart {
 			URL url = getClass().getResource("/icons/");
 			
 			file = new Image(null, getClass().getResourceAsStream(
-					"/icons/6.png"));
+					"/icons/file.png"));
 			dir = new Image(null, getClass().getResourceAsStream(
-					"/icons/3.png"));
+					"/icons/folder.png"));
 		}
 
 		  public Image getImage(Object arg0) {

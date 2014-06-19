@@ -20,6 +20,8 @@ import de.hensel.e4.test.parts.TestPart;
 
 public class FileReaderIO {
 	
+	private String testFilePath;
+	
 	public File openFileDialog(Shell shell){
 		FileDialog dialog = new FileDialog(shell);
 		dialog.open();
@@ -53,7 +55,7 @@ public class FileReaderIO {
 	
 	public void writeFile(String text){
 		String fileSuffix = String.valueOf(new Date().getTime());
-		
+		setTestFilePath("C:\\temp\\test"+fileSuffix+".txt");
 		PrintWriter pWriter = null;
         try {
             pWriter = new PrintWriter(new BufferedWriter(new FileWriter("C:\\temp\\test"+fileSuffix+".txt")));
@@ -66,5 +68,13 @@ public class FileReaderIO {
                 pWriter.close();
             }
         } 
+	}
+
+	public String getTestFilePath() {
+		return testFilePath;
+	}
+
+	public void setTestFilePath(String testFilePath) {
+		this.testFilePath = testFilePath;
 	}
 }
