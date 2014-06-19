@@ -1,10 +1,14 @@
 package de.hensel.e4.test.file;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
 
 import javax.inject.Inject;
 
@@ -45,5 +49,22 @@ public class FileReaderIO {
 			e.printStackTrace();
 		}
 		return sb.toString();
+	}
+	
+	public void writeFile(String text){
+		String fileSuffix = String.valueOf(new Date().getTime());
+		
+		PrintWriter pWriter = null;
+        try {
+            pWriter = new PrintWriter(new BufferedWriter(new FileWriter("C:\\temp\\test"+fileSuffix+".txt")));
+            pWriter.print(text);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } finally {
+            if (pWriter != null){
+                pWriter.flush();
+                pWriter.close();
+            }
+        } 
 	}
 }

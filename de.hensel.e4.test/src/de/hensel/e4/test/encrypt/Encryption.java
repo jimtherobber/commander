@@ -11,6 +11,7 @@ import java.util.Random;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import de.hensel.e4.test.file.FileReaderIO;
 import de.hensel.e4.test.keymap.KeyMap;
 import de.hensel.e4.test.keymap.service.KeyMapService;
 
@@ -18,6 +19,7 @@ public class Encryption {
 	
 	private List<Character> key = null;
 	private Integer hashCode = null;
+	private FileReaderIO fileIO = null;
 	
 	/**
 	 * Gibt eine Basisverschlüsselung für den EIngabeText zurück
@@ -45,6 +47,10 @@ public class Encryption {
 		return encryptedText.toString();
 	}
 	
+	private void writeTempFile(String text){
+		fileIO = new FileReaderIO();
+		fileIO.writeFile(text);
+	}
 
 	public String generateHashKey(String text) throws NoSuchAlgorithmException{
 		

@@ -18,7 +18,7 @@ import de.hensel.e4.test.keymap.KeyMap;
 import de.hensel.e4.test.keymap.service.IKeyMapService;
 import de.hensel.e4.test.keymap.service.KeyMapService;
 
-public class Activator implements BundleActivator,IKeyMapService {
+public class Activator implements BundleActivator {
 
         // ServiceTracker for PreferencesServices  
         private ServiceTracker serviceTracker;  
@@ -47,8 +47,8 @@ public class Activator implements BundleActivator,IKeyMapService {
                 System.out.println("PreferencesService is linked");  
                 // register Echo service  
                 Dictionary<String, String> props = new Hashtable<String, String>();  
-                props.put(IKeyMapService.class.getName(), "BundleActivator");  
-                registration = bc.registerService(IKeyMapService.class.getName(), Activator.this, props);  
+                props.put(IKeyMapService.class.getName(), "KeyMapService");  
+                registration = bc.registerService(IKeyMapService.class.getName(), new KeyMapService(), props);  
 
                 return bc.getService(reference);  
             }  
@@ -62,57 +62,4 @@ public class Activator implements BundleActivator,IKeyMapService {
                 System.out.println("PreferencesService is unlinked");  
             }  
         }
-		@Override
-		public Integer getActualKey() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public KeyMap getKeyMap() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public void setActualKey(Integer key) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void setEncryption(Encryption mode) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public Encryption getEncryption() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public void setDecryption(Decryption decryption) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public Map<Integer, String> getEncryptedText() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public String encrypt(String text) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public String decrypt(String text) {
-			// TODO Auto-generated method stub
-			return null;
-		}  
 }
